@@ -62,7 +62,7 @@ export default function CampsiteSignalFinderPage() {
 
   return (
     <ToolPage
-      line="Goodfolk Camp Utilities"
+      line="Goodfolk Utilities"
       title="Campsite Signal Finder"
       description="Estimate campground cell signal quality for Georgia state park camping before you book or pack your work setup."
     >
@@ -100,16 +100,17 @@ export default function CampsiteSignalFinderPage() {
           </div>
 
           <p className="mt-4 text-sm leading-6 text-zinc-400">
-            This MVP uses static Georgia campground seed data so you can compare
-            likely signal strength before booking. Carrier filtering shows
-            campgrounds where the selected network is tied for the strongest
-            score in the record.
+            This MVP uses placeholder Georgia planning data so you can compare
+            rough signal expectations before booking. These scores are not
+            verified carrier measurements, coverage maps, or live field tests.
+            Carrier filtering shows campgrounds where the selected network is
+            tied for the strongest score in the current placeholder record.
           </p>
         </section>
 
         <section className="rounded-2xl border border-amber-300/30 bg-slate-900 p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-300">
-            Georgia MVP Snapshot
+            Georgia Snapshot
           </p>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
@@ -141,7 +142,7 @@ export default function CampsiteSignalFinderPage() {
             <h2 className="text-2xl font-bold">Campground results</h2>
             <p className="mt-2 text-sm text-zinc-400">
               {results.length} match{results.length === 1 ? "" : "es"} from the
-              current Georgia seed set.
+              current Georgia dataset.
             </p>
           </div>
         </div>
@@ -161,9 +162,10 @@ export default function CampsiteSignalFinderPage() {
       </section>
 
       <p className="mt-8 text-sm leading-6 text-zinc-500">
-        These scores are planning estimates for an MVP dataset, not live tower
-        measurements. Terrain, weather, foliage, site placement, congestion,
-        and device hardware can all change your real-world results.
+        Important: these current scores are placeholder planning estimates for
+        the MVP and are not verified carrier measurements. Real-world signal can
+        vary substantially based on terrain, weather, foliage, campsite
+        placement, congestion, season, and device hardware.
       </p>
 
       <RelatedTools currentHref="/campsite-signal-finder" category="camp" />
