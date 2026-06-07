@@ -6,6 +6,8 @@ import ToolPage from "@/components/ToolPage";
 import {
   campsiteSignalCampgrounds,
   carrierLabels,
+  formatConfidenceLevel,
+  formatLastVerified,
   getBestCarriers,
   searchCampgrounds,
   type CarrierFilter,
@@ -100,11 +102,11 @@ export default function CampsiteSignalFinderPage() {
           </div>
 
           <p className="mt-4 text-sm leading-6 text-zinc-400">
-            This MVP uses placeholder Georgia planning data so you can compare
-            rough signal expectations before booking. These scores are not
-            verified carrier measurements, coverage maps, or live field tests.
-            Carrier filtering shows campgrounds where the selected network is
-            tied for the strongest score in the current placeholder record.
+            These are placeholder planning scores for the MVP. They are not
+            verified carrier measurements yet. Use them as a rough planning
+            aid, not a guarantee of campsite connectivity. Carrier filtering
+            shows campgrounds where the selected network is tied for the
+            strongest score in the current placeholder record.
           </p>
         </section>
 
@@ -163,9 +165,10 @@ export default function CampsiteSignalFinderPage() {
 
       <p className="mt-8 text-sm leading-6 text-zinc-500">
         Important: these current scores are placeholder planning estimates for
-        the MVP and are not verified carrier measurements. Real-world signal can
-        vary substantially based on terrain, weather, foliage, campsite
-        placement, congestion, season, and device hardware.
+        the MVP and are not verified carrier measurements. Use them as a rough
+        planning aid, not a guarantee of campsite connectivity. Real-world
+        signal can vary substantially based on terrain, weather, foliage,
+        campsite placement, congestion, season, and device hardware.
       </p>
 
       <RelatedTools currentHref="/campsite-signal-finder" category="camp" />
@@ -252,6 +255,14 @@ function CampgroundCard({
           <p className="mt-2 text-sm leading-6 text-zinc-300">
             {campground.notes}
           </p>
+          <div className="mt-4 space-y-2 text-sm text-zinc-400">
+            <p>Source: {campground.sourceLabel}</p>
+            <p>
+              Confidence:{" "}
+              {formatConfidenceLevel(campground.confidenceLevel)}
+            </p>
+            <p>Last verified: {formatLastVerified(campground.lastVerified)}</p>
+          </div>
           <p className="mt-4 text-xs uppercase tracking-[0.2em] text-zinc-500">
             Last updated {campground.lastUpdated}
           </p>

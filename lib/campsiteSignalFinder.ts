@@ -2,6 +2,15 @@ export type CarrierKey = "verizonScore" | "attScore" | "tmobileScore";
 
 export type CarrierFilter = "all" | CarrierKey;
 
+export type SignalSourceType =
+  | "placeholder"
+  | "fcc"
+  | "carrier-map"
+  | "field-test"
+  | "user-report";
+
+export type ConfidenceLevel = "low" | "medium" | "high";
+
 export type RecommendationLabel =
   | "Not recommended for remote work"
   | "Risky; backup hotspot recommended"
@@ -20,6 +29,10 @@ export type CampgroundSignalSeed = {
   tmobileScore: number;
   remoteWorkScore: number;
   notes: string;
+  sourceType: SignalSourceType;
+  sourceLabel: string;
+  confidenceLevel: ConfidenceLevel;
+  lastVerified: string | null;
   lastUpdated: string;
 };
 
@@ -32,6 +45,14 @@ export const carrierLabels: Record<CarrierKey, string> = {
   attScore: "AT&T",
   tmobileScore: "T-Mobile",
 };
+
+export function formatConfidenceLevel(confidenceLevel: ConfidenceLevel) {
+  return confidenceLevel.charAt(0).toUpperCase() + confidenceLevel.slice(1);
+}
+
+export function formatLastVerified(lastVerified: string | null) {
+  return lastVerified ?? "Not yet verified";
+}
 
 export function getRemoteWorkRecommendation(
   score: number,
@@ -123,7 +144,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 6,
     remoteWorkScore: 7,
     notes:
-      "Reliable morning and midday signal near the lake loop. Video calls may need a hotspot boost at busier times.",
+      "Estimated stronger coverage near developed areas; verify before relying on this site for work.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -138,7 +163,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 4,
     remoteWorkScore: 5,
     notes:
-      "Usable for email and messaging at most sites. Backup connectivity is wise for longer work sessions.",
+      "Placeholder estimate suggests basic connectivity may be possible in some areas, but a backup plan is strongly recommended.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -153,7 +182,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 3,
     remoteWorkScore: 3,
     notes:
-      "Scenic but patchy. Expect dropped calls in lower areas and plan offline work if you are staying deep in the canyon area.",
+      "Placeholder estimate suggests weaker coverage in more remote terrain; plan for offline use unless you verify signal ahead of time.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -168,7 +201,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 2,
     remoteWorkScore: 4,
     notes:
-      "Signal improves closer to the park entrance. Good enough for light planning, but not ideal for a full remote-work day.",
+      "Estimated coverage may be somewhat better near developed access areas, but this record is not verified enough to rely on for work.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -183,7 +220,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 5,
     remoteWorkScore: 6,
     notes:
-      "Strongest performance near the campground road and visitor area. Enough for light remote work with modest upload demands.",
+      "Placeholder estimate suggests moderate coverage near more developed park areas; verify before planning calls or uploads.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -198,7 +239,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 5,
     remoteWorkScore: 7,
     notes:
-      "Balanced carrier coverage around the main campground. Shared lodge traffic can make evening speeds less predictable.",
+      "Estimated balanced coverage for the main campground area, but this remains a low-confidence planning record until verified.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -213,7 +258,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 6,
     remoteWorkScore: 8,
     notes:
-      "Consistent coverage close to the lake and campground loops. One of the stronger options for dependable weekday camp work.",
+      "Placeholder planning data suggests this may be one of the stronger options in the current MVP set, but it is not a verified coverage guarantee.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -228,7 +277,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 4,
     remoteWorkScore: 6,
     notes:
-      "Moderate all-around service. Fine for messaging and lighter work, but large uploads may be frustrating.",
+      "Estimated moderate service for planning purposes only; verify before depending on this site for steady work connectivity.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -243,7 +296,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 3,
     remoteWorkScore: 5,
     notes:
-      "Elevation helps in some spots, but coverage varies across the mountain. Bring backup power and offline work if deadlines matter.",
+      "Placeholder estimate suggests variable coverage across the mountain terrain; treat this as a rough planning aid and verify independently.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
   {
@@ -258,7 +315,11 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     tmobileScore: 7,
     remoteWorkScore: 9,
     notes:
-      "Strong coastal coverage and one of the most remote-work-friendly options in this Georgia MVP set.",
+      "Placeholder planning data suggests relatively stronger coverage than most current MVP records, but it still has not been field-verified.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
     lastUpdated: "2026-06-03",
   },
 ];
