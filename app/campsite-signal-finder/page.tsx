@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import RelatedTools from "@/components/RelatedTools";
 import ToolPage from "@/components/ToolPage";
@@ -241,14 +242,20 @@ function CampgroundCard({
         />
       </div>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="rounded-xl border border-slate-800 bg-slate-950 p-4">
-          <p className="text-sm font-semibold text-white">Recommendation</p>
-          <p className="mt-2 text-zinc-300">{campground.recommendation}</p>
-          <p className="mt-4 text-sm text-zinc-400">
-            Strongest carrier: {strongestCarrierKeys.join(", ")}
-          </p>
-        </div>
+        <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="rounded-xl border border-slate-800 bg-slate-950 p-4">
+            <p className="text-sm font-semibold text-white">Recommendation</p>
+            <p className="mt-2 text-zinc-300">{campground.recommendation}</p>
+            <p className="mt-4 text-sm text-zinc-400">
+              Strongest carrier: {strongestCarrierKeys.join(", ")}
+            </p>
+            <Link
+              href={`/campsite-signal-finder/${campground.slug}`}
+              className="mt-4 inline-flex rounded-lg border border-slate-700 px-3 py-2 text-sm font-semibold text-zinc-300 transition hover:border-amber-300 hover:text-amber-200"
+            >
+              View campground details
+            </Link>
+          </div>
 
         <div className="rounded-xl border border-slate-800 bg-slate-950 p-4">
           <p className="text-sm font-semibold text-white">Planner notes</p>

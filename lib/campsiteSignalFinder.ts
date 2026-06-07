@@ -18,6 +18,7 @@ export type RecommendationLabel =
   | "Good remote-work candidate";
 
 export type CampgroundSignalSeed = {
+  slug: string;
   name: string;
   parkName: string;
   city: string;
@@ -133,6 +134,7 @@ export function searchCampgrounds(
 
 const campgroundSignalSeeds: CampgroundSignalSeed[] = [
   {
+    slug: "fort-yargo-state-park",
     name: "Fort Yargo State Park Campground",
     parkName: "Fort Yargo State Park",
     city: "Winder",
@@ -152,6 +154,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "hard-labor-creek-state-park",
     name: "Hard Labor Creek Campground",
     parkName: "Hard Labor Creek State Park",
     city: "Rutledge",
@@ -171,6 +174,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "cloudland-canyon-state-park",
     name: "Cloudland Canyon West Rim Campground",
     parkName: "Cloudland Canyon State Park",
     city: "Rising Fawn",
@@ -190,6 +194,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "vogel-state-park",
     name: "Vogel State Park Campground",
     parkName: "Vogel State Park",
     city: "Blairsville",
@@ -209,6 +214,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "tallulah-gorge-state-park",
     name: "Tallulah Gorge Campground",
     parkName: "Tallulah Gorge State Park",
     city: "Tallulah Falls",
@@ -228,6 +234,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "unicoi-state-park",
     name: "Unicoi State Park Campground",
     parkName: "Unicoi State Park",
     city: "Helen",
@@ -247,6 +254,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "red-top-mountain-state-park",
     name: "Red Top Mountain Campground",
     parkName: "Red Top Mountain State Park",
     city: "Cartersville",
@@ -266,6 +274,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "amicalola-falls-state-park",
     name: "Amicalola Falls Campground",
     parkName: "Amicalola Falls State Park",
     city: "Dawsonville",
@@ -285,6 +294,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "black-rock-mountain-state-park",
     name: "Black Rock Mountain Campground",
     parkName: "Black Rock Mountain State Park",
     city: "Mountain City",
@@ -304,6 +314,7 @@ const campgroundSignalSeeds: CampgroundSignalSeed[] = [
     lastUpdated: "2026-06-03",
   },
   {
+    slug: "skidaway-island-state-park",
     name: "Skidaway Island Campground",
     parkName: "Skidaway Island State Park",
     city: "Savannah",
@@ -329,3 +340,7 @@ export const campsiteSignalCampgrounds: CampgroundSignalEntry[] =
     ...campground,
     recommendation: getRemoteWorkRecommendation(campground.remoteWorkScore),
   }));
+
+export function getCampsiteSignalCampgroundBySlug(slug: string) {
+  return campsiteSignalCampgrounds.find((campground) => campground.slug === slug);
+}
