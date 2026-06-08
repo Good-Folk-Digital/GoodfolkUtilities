@@ -14,6 +14,7 @@ export {
   formatLastVerified,
   placeholderSourceMetadata,
   resolveSourceMetadata,
+  sourceReliabilityWeights,
 } from "@/lib/campsiteSignalFinder/sources";
 export {
   normalizeCampgroundSignalRecord,
