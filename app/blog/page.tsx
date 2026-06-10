@@ -9,6 +9,13 @@ const posts = [
       "Learn what affects daily water needs, including body weight, activity, weather, and caffeine or alcohol intake.",
   },
   {
+    href: "/blog/how-much-does-electricity-cost-per-month",
+    category: "Home Guide",
+    title: "How Much Does Electricity Cost Per Month?",
+    description:
+      "Learn what affects your electric bill, how electricity costs are calculated, and how to estimate monthly energy expenses.",
+  },
+  {
     href: "/blog/how-to-plan-a-trip-budget-without-a-spreadsheet",
     category: "Travel Guide",
     title: "How to Plan a Trip Budget Without a Spreadsheet",
@@ -36,6 +43,7 @@ const posts = [
     description:
       "Use a base color, contrast, palette balance, and reusable CSS values to choose better website colors.",
   },
+
 ];
 
 export default function BlogPage() {

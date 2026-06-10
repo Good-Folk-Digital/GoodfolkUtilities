@@ -1,0 +1,346 @@
+export type CarrierKey = "verizonScore" | "attScore" | "tmobileScore";
+
+export type CarrierFilter = "all" | CarrierKey;
+
+export type SignalSourceType =
+  | "placeholder"
+  | "fcc"
+  | "carrier-map"
+  | "field-test"
+  | "user-report";
+
+export type ConfidenceLevel = "low" | "medium" | "high";
+
+export type RecommendationLabel =
+  | "Not recommended for remote work"
+  | "Risky; backup hotspot recommended"
+  | "Usable for light remote work"
+  | "Good remote-work candidate";
+
+export type CampgroundSignalSeed = {
+  slug: string;
+  name: string;
+  parkName: string;
+  city: string;
+  state: string;
+  latitude: number;
+  longitude: number;
+  verizonScore: number;
+  attScore: number;
+  tmobileScore: number;
+  remoteWorkScore: number;
+  notes: string;
+  sourceType: SignalSourceType;
+  sourceLabel: string;
+  confidenceLevel: ConfidenceLevel;
+  lastVerified: string | null;
+  lastUpdated: string;
+};
+
+export type CampgroundSignalEntry = CampgroundSignalSeed & {
+  recommendation: RecommendationLabel;
+};
+
+export const carrierLabels: Record<CarrierKey, string> = {
+  verizonScore: "Verizon",
+  attScore: "AT&T",
+  tmobileScore: "T-Mobile",
+};
+
+export function formatConfidenceLevel(confidenceLevel: ConfidenceLevel) {
+  return confidenceLevel.charAt(0).toUpperCase() + confidenceLevel.slice(1);
+}
+
+export function formatLastVerified(lastVerified: string | null) {
+  return lastVerified ?? "Not yet verified";
+}
+
+export function getRemoteWorkRecommendation(
+  score: number,
+): RecommendationLabel {
+  if (score <= 3) {
+    return "Not recommended for remote work";
+  }
+
+  if (score <= 5) {
+    return "Risky; backup hotspot recommended";
+  }
+
+  if (score <= 7) {
+    return "Usable for light remote work";
+  }
+
+  return "Good remote-work candidate";
+}
+
+export function getBestCarriers(entry: CampgroundSignalEntry) {
+  const carrierScores = [
+    { key: "verizonScore" as const, score: entry.verizonScore },
+    { key: "attScore" as const, score: entry.attScore },
+    { key: "tmobileScore" as const, score: entry.tmobileScore },
+  ];
+  const topScore = Math.max(...carrierScores.map((carrier) => carrier.score));
+
+  return carrierScores
+    .filter((carrier) => carrier.score === topScore)
+    .map((carrier) => carrier.key);
+}
+
+export function matchesCarrierFilter(
+  entry: CampgroundSignalEntry,
+  carrier: CarrierFilter,
+) {
+  if (carrier === "all") {
+    return true;
+  }
+
+  return getBestCarriers(entry).includes(carrier);
+}
+
+export function searchCampgrounds(
+  campgrounds: CampgroundSignalEntry[],
+  query: string,
+  carrier: CarrierFilter,
+) {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  return campgrounds.filter((campground) => {
+    if (!matchesCarrierFilter(campground, carrier)) {
+      return false;
+    }
+
+    if (!normalizedQuery) {
+      return true;
+    }
+
+    const carrierTerms = getBestCarriers(campground).map(
+      (carrierKey) => carrierLabels[carrierKey].toLowerCase(),
+    );
+    const haystack = [
+      campground.name,
+      campground.parkName,
+      campground.city,
+      campground.state,
+      campground.recommendation,
+      campground.notes,
+      ...carrierTerms,
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    return haystack.includes(normalizedQuery);
+  });
+}
+
+const campgroundSignalSeeds: CampgroundSignalSeed[] = [
+  {
+    slug: "fort-yargo-state-park",
+    name: "Fort Yargo State Park Campground",
+    parkName: "Fort Yargo State Park",
+    city: "Winder",
+    state: "Georgia",
+    latitude: 33.9618,
+    longitude: -83.7274,
+    verizonScore: 8,
+    attScore: 7,
+    tmobileScore: 6,
+    remoteWorkScore: 7,
+    notes:
+      "Estimated stronger coverage near developed areas; verify before relying on this site for work.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "hard-labor-creek-state-park",
+    name: "Hard Labor Creek Campground",
+    parkName: "Hard Labor Creek State Park",
+    city: "Rutledge",
+    state: "Georgia",
+    latitude: 33.6207,
+    longitude: -83.5889,
+    verizonScore: 6,
+    attScore: 5,
+    tmobileScore: 4,
+    remoteWorkScore: 5,
+    notes:
+      "Placeholder estimate suggests basic connectivity may be possible in some areas, but a backup plan is strongly recommended.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "cloudland-canyon-state-park",
+    name: "Cloudland Canyon West Rim Campground",
+    parkName: "Cloudland Canyon State Park",
+    city: "Rising Fawn",
+    state: "Georgia",
+    latitude: 34.8254,
+    longitude: -85.4892,
+    verizonScore: 4,
+    attScore: 5,
+    tmobileScore: 3,
+    remoteWorkScore: 3,
+    notes:
+      "Placeholder estimate suggests weaker coverage in more remote terrain; plan for offline use unless you verify signal ahead of time.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "vogel-state-park",
+    name: "Vogel State Park Campground",
+    parkName: "Vogel State Park",
+    city: "Blairsville",
+    state: "Georgia",
+    latitude: 34.7651,
+    longitude: -83.9154,
+    verizonScore: 5,
+    attScore: 4,
+    tmobileScore: 2,
+    remoteWorkScore: 4,
+    notes:
+      "Estimated coverage may be somewhat better near developed access areas, but this record is not verified enough to rely on for work.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "tallulah-gorge-state-park",
+    name: "Tallulah Gorge Campground",
+    parkName: "Tallulah Gorge State Park",
+    city: "Tallulah Falls",
+    state: "Georgia",
+    latitude: 34.7337,
+    longitude: -83.3944,
+    verizonScore: 7,
+    attScore: 6,
+    tmobileScore: 5,
+    remoteWorkScore: 6,
+    notes:
+      "Placeholder estimate suggests moderate coverage near more developed park areas; verify before planning calls or uploads.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "unicoi-state-park",
+    name: "Unicoi State Park Campground",
+    parkName: "Unicoi State Park",
+    city: "Helen",
+    state: "Georgia",
+    latitude: 34.7072,
+    longitude: -83.7165,
+    verizonScore: 7,
+    attScore: 7,
+    tmobileScore: 5,
+    remoteWorkScore: 7,
+    notes:
+      "Estimated balanced coverage for the main campground area, but this remains a low-confidence planning record until verified.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "red-top-mountain-state-park",
+    name: "Red Top Mountain Campground",
+    parkName: "Red Top Mountain State Park",
+    city: "Cartersville",
+    state: "Georgia",
+    latitude: 34.1419,
+    longitude: -84.7074,
+    verizonScore: 8,
+    attScore: 8,
+    tmobileScore: 6,
+    remoteWorkScore: 8,
+    notes:
+      "Placeholder planning data suggests this may be one of the stronger options in the current MVP set, but it is not a verified coverage guarantee.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "amicalola-falls-state-park",
+    name: "Amicalola Falls Campground",
+    parkName: "Amicalola Falls State Park",
+    city: "Dawsonville",
+    state: "Georgia",
+    latitude: 34.562,
+    longitude: -84.2491,
+    verizonScore: 6,
+    attScore: 6,
+    tmobileScore: 4,
+    remoteWorkScore: 6,
+    notes:
+      "Estimated moderate service for planning purposes only; verify before depending on this site for steady work connectivity.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "black-rock-mountain-state-park",
+    name: "Black Rock Mountain Campground",
+    parkName: "Black Rock Mountain State Park",
+    city: "Mountain City",
+    state: "Georgia",
+    latitude: 34.9067,
+    longitude: -83.4128,
+    verizonScore: 6,
+    attScore: 5,
+    tmobileScore: 3,
+    remoteWorkScore: 5,
+    notes:
+      "Placeholder estimate suggests variable coverage across the mountain terrain; treat this as a rough planning aid and verify independently.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+  {
+    slug: "skidaway-island-state-park",
+    name: "Skidaway Island Campground",
+    parkName: "Skidaway Island State Park",
+    city: "Savannah",
+    state: "Georgia",
+    latitude: 31.9363,
+    longitude: -81.0495,
+    verizonScore: 9,
+    attScore: 8,
+    tmobileScore: 7,
+    remoteWorkScore: 9,
+    notes:
+      "Placeholder planning data suggests relatively stronger coverage than most current MVP records, but it still has not been field-verified.",
+    sourceType: "placeholder",
+    sourceLabel: "MVP planning estimate",
+    confidenceLevel: "low",
+    lastVerified: null,
+    lastUpdated: "2026-06-03",
+  },
+];
+
+export const campsiteSignalCampgrounds: CampgroundSignalEntry[] =
+  campgroundSignalSeeds.map((campground) => ({
+    ...campground,
+    recommendation: getRemoteWorkRecommendation(campground.remoteWorkScore),
+  }));
+
+export function getCampsiteSignalCampgroundBySlug(slug: string) {
+  return campsiteSignalCampgrounds.find((campground) => campground.slug === slug);
+}

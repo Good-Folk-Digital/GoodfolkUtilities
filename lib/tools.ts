@@ -31,82 +31,102 @@ export const categories: ToolCategory[] = [
   {
     slug: "office",
     title: "Office Utilities",
-    description: "Free tools for work, data cleanup, documents, and daily operations.",
-    intro: "Explore free office utilities for everyday digital work, file cleanup, text formatting, QR codes, passwords, Markdown, and practical productivity tasks. These tools are designed for quick browser-based use when you need to clean data, format content, organize files, or solve small office problems without opening a heavy app. Goodfolk Office Utilities are free to use, require no signup, and are built for simple repeatable tasks that save time during work, school, admin, and support workflows.",
+    description:
+      "Free tools for work, data cleanup, documents, and daily operations.",
+    intro:
+      "Explore free office utilities for everyday digital work, file cleanup, text formatting, QR codes, passwords, Markdown, and practical productivity tasks. These tools are designed for quick browser-based use when you need to clean data, format content, organize files, or solve small office problems without opening a heavy app. Goodfolk Office Utilities are free to use, require no signup, and are built for simple repeatable tasks that save time during work, school, admin, and support workflows.",
     href: "/office",
     toolCount: 10,
   },
   {
     slug: "camp",
     title: "Camp Utilities",
-    description: "Free camping tools for packing, water planning, gear weight, and trip prep.",
-    intro: "Use free camp utilities to plan water, food, power, packing, weather, trip costs, and outdoor comfort before leaving home. These camping tools are built for quick estimates and practical planning, whether you are preparing for car camping, a weekend campsite, a backpacking test, or a simple outdoor trip. Goodfolk Camp Utilities help you think through supplies, timing, gear, and basic needs so your trip feels easier, safer, and less chaotic. No signup required.",
+    description:
+      "Free camping tools for packing, water planning, gear weight, and trip prep.",
+    intro:
+      "Use free camp utilities to plan water, food, power, packing, weather, trip costs, and outdoor comfort before leaving home. These camping tools are built for quick estimates and practical planning, whether you are preparing for car camping, a weekend campsite, a backpacking test, or a simple outdoor trip. Goodfolk Camp Utilities help you think through supplies, timing, gear, and basic needs so your trip feels easier, safer, and less chaotic. No signup required.",
     href: "/camp",
     toolCount: 11,
   },
   {
     slug: "home",
     title: "Home Utilities",
-    description: "Free home utilities for paint planning, room sizes, electricity costs, moving boxes, and project budgets.",
-    intro: "Explore free home utilities for common household projects, room planning, paint estimates, flooring, moving boxes, electricity costs, project budgets, and everyday home calculations. These tools are made for quick planning before you buy supplies, start a project, compare options, or estimate how much material you may need. Goodfolk Home Utilities are simple browser-based helpers for renters, homeowners, DIY projects, and small household decisions. All tools are free to use with no signup required.",
+    description:
+      "Free home utilities for paint planning, room sizes, electricity costs, moving boxes, and project budgets.",
+    intro:
+      "Explore free home utilities for common household projects, room planning, paint estimates, flooring, moving boxes, electricity costs, project budgets, and everyday home calculations. These tools are made for quick planning before you buy supplies, start a project, compare options, or estimate how much material you may need. Goodfolk Home Utilities are simple browser-based helpers for renters, homeowners, DIY projects, and small household decisions. All tools are free to use with no signup required.",
     href: "/home",
     toolCount: 10,
   },
   {
     slug: "finance",
     title: "Finance Utilities",
-    description: "Free finance tools for budgeting, savings goals, debt payoff, subscriptions, and income planning.",
-    intro: "Use free finance utilities to estimate budgets, savings goals, debt payoff timelines, subscriptions, loan payments, hourly income, emergency funds, and everyday money decisions. These calculators are built for quick planning and personal organization, not complicated spreadsheets. Goodfolk Finance Utilities help you compare scenarios, understand tradeoffs, and make clearer financial plans for daily life, travel, bills, debt, and savings. These tools are free to use and require no account or signup.",
+    description:
+      "Free finance tools for budgeting, savings goals, debt payoff, subscriptions, and income planning.",
+    intro:
+      "Use free finance utilities to estimate budgets, savings goals, debt payoff timelines, subscriptions, loan payments, hourly income, emergency funds, and everyday money decisions. These calculators are built for quick planning and personal organization, not complicated spreadsheets. Goodfolk Finance Utilities help you compare scenarios, understand tradeoffs, and make clearer financial plans for daily life, travel, bills, debt, and savings. These tools are free to use and require no account or signup.",
     href: "/finance",
     toolCount: 10,
   },
   {
-  slug: "student",
-  title: "Student Utilities",
-  description: "Free student tools for grades, GPA, study planning, assignments, writing, and semester workload.",
-  intro: "Explore free student utilities for GPA calculations, grade planning, assignments, study schedules, essay word counts, citations, reading time, flashcards, and semester workload planning. These tools are designed to help students organize schoolwork, estimate outcomes, and reduce last-minute academic stress. Goodfolk Student Utilities are useful for college, online classes, technical programs, and self-study. Each tool is simple, browser-based, free to use, and available without creating an account.",
-  href: "/student",
-  toolCount: 10,
+    slug: "student",
+    title: "Student Utilities",
+    description:
+      "Free student tools for grades, GPA, study planning, assignments, writing, and semester workload.",
+    intro:
+      "Explore free student utilities for GPA calculations, grade planning, assignments, study schedules, essay word counts, citations, reading time, flashcards, and semester workload planning. These tools are designed to help students organize schoolwork, estimate outcomes, and reduce last-minute academic stress. Goodfolk Student Utilities are useful for college, online classes, technical programs, and self-study. Each tool is simple, browser-based, free to use, and available without creating an account.",
+    href: "/student",
+    toolCount: 10,
   },
   {
-  slug: "design",
-  title: "Design Utilities",
-  description: "Free design tools for colors, contrast, gradients, shadows, spacing, typography, and UI layout.",
-  intro: "Use free design utilities for colors, contrast, palettes, gradients, shadows, border radius, spacing, typography, rem conversions, and image aspect ratios. These tools are built for UI design, front-end development, branding, and quick visual decisions. Goodfolk Design Utilities help you preview values, copy CSS-friendly output, and make cleaner design choices without opening a full design app. All tools are free, fast, browser-based, and require no signup.",
-  href: "/design",
-  toolCount: 10,
+    slug: "design",
+    title: "Design Utilities",
+    description:
+      "Free design tools for colors, contrast, gradients, shadows, spacing, typography, and UI layout.",
+    intro:
+      "Use free design utilities for colors, contrast, palettes, gradients, shadows, border radius, spacing, typography, rem conversions, and image aspect ratios. These tools are built for UI design, front-end development, branding, and quick visual decisions. Goodfolk Design Utilities help you preview values, copy CSS-friendly output, and make cleaner design choices without opening a full design app. All tools are free, fast, browser-based, and require no signup.",
+    href: "/design",
+    toolCount: 10,
   },
   {
-  slug: "developer",
-  title: "Developer Utilities",
-  description: "Free developer tools for JSON, URLs, Base64, timestamps, IDs, regex, JWTs, HTML entities, and API cleanup.",
-  intro: "Explore free developer utilities for JSON formatting, URL encoding, Base64 conversion, UUID generation, timestamps, HTML entities, regex testing, JWT decoding, API responses, and CSS units. These tools are made for quick coding, debugging, formatting, and everyday development tasks. Goodfolk Developer Utilities are lightweight browser-based helpers for developers, students, support analysts, and anyone working with web data or code snippets. No signup required.",
-  href: "/developer",
-  toolCount: 10,
-  },  
-  {
-  slug: "travel",
-  title: "Travel Utilities",
-  description: "Free travel tools for trip budgets, packing, hotels, gas, layovers, attractions, and travel planning.",
-  intro: "Use free travel utilities to estimate trip budgets, gas costs, hotel splits, packing lists, layovers, attraction timing, daily travel costs, currency notes, time zones, and travel insurance checklists. These tools are designed for practical trip planning before and during travel. Goodfolk Travel Utilities help you compare costs, organize plans, reduce surprises, and make trips feel easier to manage. All tools are free to use, browser-based, and require no signup.",
-  href: "/travel",
-  toolCount: 10,
+    slug: "developer",
+    title: "Developer Utilities",
+    description:
+      "Free developer tools for JSON, URLs, Base64, timestamps, IDs, regex, JWTs, HTML entities, and API cleanup.",
+    intro:
+      "Explore free developer utilities for JSON formatting, URL encoding, Base64 conversion, UUID generation, timestamps, HTML entities, regex testing, JWT decoding, API responses, and CSS units. These tools are made for quick coding, debugging, formatting, and everyday development tasks. Goodfolk Developer Utilities are lightweight browser-based helpers for developers, students, support analysts, and anyone working with web data or code snippets. No signup required.",
+    href: "/developer",
+    toolCount: 10,
   },
   {
-  slug: "business",
-  title: "Business Utilities",
-  description: "Free business tools for profit margins, pricing, invoices, break-even planning, meetings, and startup costs.",
-  intro: "Explore free business utilities for profit margins, markup, break-even points, sales tax, invoices, hourly rates, freelance pricing, meeting costs, employee costs, and startup planning. These tools are built for small business owners, freelancers, side hustlers, students, and anyone making pricing or planning decisions. Goodfolk Business Utilities provide quick estimates that help you understand costs, revenue, profit, and tradeoffs. No signup required.",
-  href: "/business",
-  toolCount: 10,
+    slug: "travel",
+    title: "Travel Utilities",
+    description:
+      "Free travel tools for trip budgets, packing, hotels, gas, layovers, attractions, and travel planning.",
+    intro:
+      "Use free travel utilities to estimate trip budgets, gas costs, hotel splits, packing lists, layovers, attraction timing, daily travel costs, currency notes, time zones, and travel insurance checklists. These tools are designed for practical trip planning before and during travel. Goodfolk Travel Utilities help you compare costs, organize plans, reduce surprises, and make trips feel easier to manage. All tools are free to use, browser-based, and require no signup.",
+    href: "/travel",
+    toolCount: 10,
   },
   {
-  slug: "health",
-  title: "Health Utilities",
-  description: "Free health tools for BMI, calories, water intake, protein, walking, macros, sleep, heart rate zones, and weight planning.",
-  intro: "Use free health utilities for BMI, calories, water intake, protein, walking calories, macros, target weight planning, sleep timing, heart rate zones, and body fat estimates. These tools are designed for general wellness planning and everyday estimates, not medical diagnosis or personalized medical advice. Goodfolk Health Utilities can help you think through goals, habits, activity, and basic health-related numbers. All tools are free and require no signup.",
-  href: "/health",
-  toolCount: 10,
+    slug: "business",
+    title: "Business Utilities",
+    description:
+      "Free business tools for profit margins, pricing, invoices, break-even planning, meetings, and startup costs.",
+    intro:
+      "Explore free business utilities for profit margins, markup, break-even points, sales tax, invoices, hourly rates, freelance pricing, meeting costs, employee costs, and startup planning. These tools are built for small business owners, freelancers, side hustlers, students, and anyone making pricing or planning decisions. Goodfolk Business Utilities provide quick estimates that help you understand costs, revenue, profit, and tradeoffs. No signup required.",
+    href: "/business",
+    toolCount: 10,
+  },
+  {
+    slug: "health",
+    title: "Health Utilities",
+    description:
+      "Free health tools for BMI, calories, water intake, protein, walking, macros, sleep, heart rate zones, and weight planning.",
+    intro:
+      "Use free health utilities for BMI, calories, water intake, protein, walking calories, macros, target weight planning, sleep timing, heart rate zones, and body fat estimates. These tools are designed for general wellness planning and everyday estimates, not medical diagnosis or personalized medical advice. Goodfolk Health Utilities can help you think through goals, habits, activity, and basic health-related numbers. All tools are free and require no signup.",
+    href: "/health",
+    toolCount: 10,
   },
 ];
 
@@ -191,7 +211,8 @@ export const campTools: ToolItem[] = [
     slug: "campsite-signal-finder",
     title: "Campsite Signal Finder",
     href: "/campsite-signal-finder",
-    description: "Estimate cell signal quality for Georgia campgrounds before booking or traveling.",
+    description:
+      "Estimate cell signal quality for Georgia campgrounds before booking or traveling.",
     category: "camp",
   },
   {
@@ -205,7 +226,8 @@ export const campTools: ToolItem[] = [
     slug: "camp-battery-estimator",
     title: "Camp Battery Estimator",
     href: "/camp-battery-estimator",
-    description: "Estimate battery needs for phones, lights, fans, and devices.",
+    description:
+      "Estimate battery needs for phones, lights, fans, and devices.",
     category: "camp",
   },
   {
@@ -325,29 +347,29 @@ export const homeTools: ToolItem[] = [
     category: "home",
   },
   {
-  slug: "tile-calculator",
-  title: "Tile Calculator",
-  description:
-    "Estimate tile count, waste allowance, boxes needed, and material cost for a floor or wall.",
-  href: "/tile-calculator",
-  category: "home",
-},
-{
-  slug: "wallpaper-calculator",
-  title: "Wallpaper Calculator",
-  description:
-    "Estimate wallpaper rolls needed based on wall size, roll coverage, pattern waste, and cost.",
-  href: "/wallpaper-calculator",
-  category: "home",
-},
-{
-  slug: "home-project-timeline-estimator",
-  title: "Home Project Timeline Estimator",
-  description:
-    "Estimate a rough project timeline based on project type, complexity, DIY level, and buffer time.",
-  href: "/home-project-timeline-estimator",
-  category: "home",
-},
+    slug: "tile-calculator",
+    title: "Tile Calculator",
+    description:
+      "Estimate tile count, waste allowance, boxes needed, and material cost for a floor or wall.",
+    href: "/tile-calculator",
+    category: "home",
+  },
+  {
+    slug: "wallpaper-calculator",
+    title: "Wallpaper Calculator",
+    description:
+      "Estimate wallpaper rolls needed based on wall size, roll coverage, pattern waste, and cost.",
+    href: "/wallpaper-calculator",
+    category: "home",
+  },
+  {
+    slug: "home-project-timeline-estimator",
+    title: "Home Project Timeline Estimator",
+    description:
+      "Estimate a rough project timeline based on project type, complexity, DIY level, and buffer time.",
+    href: "/home-project-timeline-estimator",
+    category: "home",
+  },
 ];
 
 export const financeTools: ToolItem[] = [
@@ -376,28 +398,28 @@ export const financeTools: ToolItem[] = [
     category: "finance",
   },
   {
-  slug: "subscription-cost-calculator",
-  title: "Subscription Cost Calculator",
-  description:
-    "Estimate monthly and yearly subscription costs, including optional annual savings from canceling unused services.",
-  href: "/subscription-cost-calculator",
-  category: "finance",
+    slug: "subscription-cost-calculator",
+    title: "Subscription Cost Calculator",
+    description:
+      "Estimate monthly and yearly subscription costs, including optional annual savings from canceling unused services.",
+    href: "/subscription-cost-calculator",
+    category: "finance",
   },
   {
-  slug: "loan-payment-calculator",
-  title: "Loan Payment Calculator",
-  description:
-    "Estimate monthly loan payments, total interest, and total repayment based on loan amount, APR, and term.",
-  href: "/loan-payment-calculator",
-  category: "finance",
+    slug: "loan-payment-calculator",
+    title: "Loan Payment Calculator",
+    description:
+      "Estimate monthly loan payments, total interest, and total repayment based on loan amount, APR, and term.",
+    href: "/loan-payment-calculator",
+    category: "finance",
   },
   {
-  slug: "tip-split-bill-calculator",
-  title: "Tip & Split Bill Calculator",
-  description:
-    "Calculate tip, total bill, and per-person cost when splitting a check.",
-  href: "/tip-split-bill-calculator",
-  category: "finance",
+    slug: "tip-split-bill-calculator",
+    title: "Tip & Split Bill Calculator",
+    description:
+      "Calculate tip, total bill, and per-person cost when splitting a check.",
+    href: "/tip-split-bill-calculator",
+    category: "finance",
   },
   {
     slug: "hourly-to-salary-calculator",
@@ -437,83 +459,82 @@ export const studentTools: ToolItem[] = [
   {
     slug: "gpa-calculator",
     title: "GPA Calculator",
-    description:
-      "Calculate GPA from course grades and credit hours.",
+    description: "Calculate GPA from course grades and credit hours.",
     href: "/gpa-calculator",
     category: "student",
   },
   {
-  slug: "grade-needed-calculator",
-  title: "Grade Needed Calculator",
-  description:
-    "Calculate the grade you need on a final exam or remaining assignment to reach your target course grade.",
-  href: "/grade-needed-calculator",
-  category: "student",
+    slug: "grade-needed-calculator",
+    title: "Grade Needed Calculator",
+    description:
+      "Calculate the grade you need on a final exam or remaining assignment to reach your target course grade.",
+    href: "/grade-needed-calculator",
+    category: "student",
   },
   {
-  slug: "assignment-planner",
-  title: "Assignment Planner",
-  description:
-    "Break an assignment into daily work sessions based on due date, estimated hours, and available study days.",
-  href: "/assignment-planner",
-  category: "student",
+    slug: "assignment-planner",
+    title: "Assignment Planner",
+    description:
+      "Break an assignment into daily work sessions based on due date, estimated hours, and available study days.",
+    href: "/assignment-planner",
+    category: "student",
   },
   {
-  slug: "semester-workload-calculator",
-  title: "Semester Workload Calculator",
-  description:
-    "Estimate weekly school workload based on credit hours, study time, assignments, and outside commitments.",
-  href: "/semester-workload-calculator",
-  category: "student",
+    slug: "semester-workload-calculator",
+    title: "Semester Workload Calculator",
+    description:
+      "Estimate weekly school workload based on credit hours, study time, assignments, and outside commitments.",
+    href: "/semester-workload-calculator",
+    category: "student",
   },
   {
-  slug: "study-timer",
-  title: "Study Timer",
-  description:
-    "Plan focused study sessions with breaks using a simple Pomodoro-style timer setup.",
-  href: "/study-timer",
-  category: "student",
+    slug: "study-timer",
+    title: "Study Timer",
+    description:
+      "Plan focused study sessions with breaks using a simple Pomodoro-style timer setup.",
+    href: "/study-timer",
+    category: "student",
   },
   {
-  slug: "essay-word-counter",
-  title: "Essay Word Counter",
-  description:
-    "Count words, characters, sentences, paragraphs, reading time, and progress toward an essay word target.",
-  href: "/essay-word-counter",
-  category: "student",
+    slug: "essay-word-counter",
+    title: "Essay Word Counter",
+    description:
+      "Count words, characters, sentences, paragraphs, reading time, and progress toward an essay word target.",
+    href: "/essay-word-counter",
+    category: "student",
   },
   {
-  slug: "citation-helper",
-  title: "Citation Helper",
-  description:
-    "Format simple MLA and APA-style citations for websites, books, articles, and videos.",
-  href: "/citation-helper",
-  category: "student",
+    slug: "citation-helper",
+    title: "Citation Helper",
+    description:
+      "Format simple MLA and APA-style citations for websites, books, articles, and videos.",
+    href: "/citation-helper",
+    category: "student",
   },
   {
-  slug: "reading-time-calculator",
-  title: "Reading Time Calculator",
-  description:
-    "Estimate how long a reading assignment will take based on word count, pages, and reading speed.",
-  href: "/reading-time-calculator",
-  category: "student",
+    slug: "reading-time-calculator",
+    title: "Reading Time Calculator",
+    description:
+      "Estimate how long a reading assignment will take based on word count, pages, and reading speed.",
+    href: "/reading-time-calculator",
+    category: "student",
   },
   {
-  slug: "flashcard-formatter",
-  title: "Flashcard Formatter",
-  description:
-    "Turn notes into simple question-and-answer flashcards for studying.",
-  href: "/flashcard-formatter",
-  category: "student",
+    slug: "flashcard-formatter",
+    title: "Flashcard Formatter",
+    description:
+      "Turn notes into simple question-and-answer flashcards for studying.",
+    href: "/flashcard-formatter",
+    category: "student",
   },
   {
-  slug: "final-exam-study-plan-generator",
-  title: "Final Exam Study Plan Generator",
-  description:
-    "Create a simple final exam study plan based on exam date, topics, available days, and study time.",
-  href: "/final-exam-study-plan-generator",
-  category: "student",
-},
+    slug: "final-exam-study-plan-generator",
+    title: "Final Exam Study Plan Generator",
+    description:
+      "Create a simple final exam study plan based on exam date, topics, available days, and study time.",
+    href: "/final-exam-study-plan-generator",
+    category: "student",
+  },
 ];
 
 export const designTools: ToolItem[] = [
@@ -526,76 +547,76 @@ export const designTools: ToolItem[] = [
     category: "design",
   },
   {
-  slug: "color-contrast-checker",
-  title: "Color Contrast Checker",
-  description:
-    "Check contrast between text and background colors and see basic WCAG-style pass/fail guidance.",
-  href: "/color-contrast-checker",
-  category: "design",
+    slug: "color-contrast-checker",
+    title: "Color Contrast Checker",
+    description:
+      "Check contrast between text and background colors and see basic WCAG-style pass/fail guidance.",
+    href: "/color-contrast-checker",
+    category: "design",
   },
   {
-  slug: "color-palette-generator",
-  title: "Color Palette Generator",
-  description:
-    "Generate color palettes from a base color, lock favorite colors, and copy HEX values or CSS variables.",
-  href: "/color-palette-generator",
-  category: "design",
+    slug: "color-palette-generator",
+    title: "Color Palette Generator",
+    description:
+      "Generate color palettes from a base color, lock favorite colors, and copy HEX values or CSS variables.",
+    href: "/color-palette-generator",
+    category: "design",
   },
   {
-  slug: "css-gradient-generator",
-  title: "CSS Gradient Generator",
-  description:
-    "Create linear CSS gradients, preview them, and copy ready-to-use CSS.",
-  href: "/css-gradient-generator",
-  category: "design",
+    slug: "css-gradient-generator",
+    title: "CSS Gradient Generator",
+    description:
+      "Create linear CSS gradients, preview them, and copy ready-to-use CSS.",
+    href: "/css-gradient-generator",
+    category: "design",
   },
   {
-  slug: "box-shadow-generator",
-  title: "Box Shadow Generator",
-  description:
-    "Create CSS box shadows, preview them, and copy ready-to-use shadow styles.",
-  href: "/box-shadow-generator",
-  category: "design",
+    slug: "box-shadow-generator",
+    title: "Box Shadow Generator",
+    description:
+      "Create CSS box shadows, preview them, and copy ready-to-use shadow styles.",
+    href: "/box-shadow-generator",
+    category: "design",
   },
   {
-  slug: "border-radius-previewer",
-  title: "Border Radius Previewer",
-  description:
-    "Preview CSS border radius values on cards and buttons, then copy ready-to-use CSS.",
-  href: "/border-radius-previewer",
-  category: "design",
+    slug: "border-radius-previewer",
+    title: "Border Radius Previewer",
+    description:
+      "Preview CSS border radius values on cards and buttons, then copy ready-to-use CSS.",
+    href: "/border-radius-previewer",
+    category: "design",
   },
   {
-  slug: "spacing-scale-generator",
-  title: "Spacing Scale Generator",
-  description:
-    "Generate consistent spacing scales in pixels and rems for UI layouts and design systems.",
-  href: "/spacing-scale-generator",
-  category: "design",
+    slug: "spacing-scale-generator",
+    title: "Spacing Scale Generator",
+    description:
+      "Generate consistent spacing scales in pixels and rems for UI layouts and design systems.",
+    href: "/spacing-scale-generator",
+    category: "design",
   },
   {
-  slug: "rem-px-converter",
-  title: "REM/PX Converter",
-  description:
-    "Convert pixels to rems and rems to pixels using a custom base font size.",
-  href: "/rem-px-converter",
-  category: "design",
+    slug: "rem-px-converter",
+    title: "REM/PX Converter",
+    description:
+      "Convert pixels to rems and rems to pixels using a custom base font size.",
+    href: "/rem-px-converter",
+    category: "design",
   },
   {
-  slug: "typography-scale-calculator",
-  title: "Typography Scale Calculator",
-  description:
-    "Generate a type scale from a base font size and ratio, with pixel and rem values.",
-  href: "/typography-scale-calculator",
-  category: "design",
+    slug: "typography-scale-calculator",
+    title: "Typography Scale Calculator",
+    description:
+      "Generate a type scale from a base font size and ratio, with pixel and rem values.",
+    href: "/typography-scale-calculator",
+    category: "design",
   },
   {
-  slug: "image-aspect-ratio-calculator",
-  title: "Image Aspect Ratio Calculator",
-  description:
-    "Calculate missing image dimensions, aspect ratios, and scaled sizes for UI layouts and media.",
-  href: "/image-aspect-ratio-calculator",
-  category: "design",
+    slug: "image-aspect-ratio-calculator",
+    title: "Image Aspect Ratio Calculator",
+    description:
+      "Calculate missing image dimensions, aspect ratios, and scaled sizes for UI layouts and media.",
+    href: "/image-aspect-ratio-calculator",
+    category: "design",
   },
 ];
 
@@ -603,82 +624,81 @@ export const developerTools: ToolItem[] = [
   {
     slug: "json-formatter",
     title: "JSON Formatter",
-    description:
-      "Format, validate, and minify JSON with copy-ready output.",
+    description: "Format, validate, and minify JSON with copy-ready output.",
     href: "/json-formatter",
     category: "developer",
   },
   {
-  slug: "url-encoder-decoder",
-  title: "URL Encoder / Decoder",
-  description:
-    "Encode and decode URLs, query strings, and text for safe use in web addresses.",
-  href: "/url-encoder-decoder",
-  category: "developer",
+    slug: "url-encoder-decoder",
+    title: "URL Encoder / Decoder",
+    description:
+      "Encode and decode URLs, query strings, and text for safe use in web addresses.",
+    href: "/url-encoder-decoder",
+    category: "developer",
   },
   {
-  slug: "base64-encoder-decoder",
-  title: "Base64 Encoder / Decoder",
-  description:
-    "Encode plain text to Base64 and decode Base64 back to readable text.",
-  href: "/base64-encoder-decoder",
-  category: "developer",
+    slug: "base64-encoder-decoder",
+    title: "Base64 Encoder / Decoder",
+    description:
+      "Encode plain text to Base64 and decode Base64 back to readable text.",
+    href: "/base64-encoder-decoder",
+    category: "developer",
   },
   {
-  slug: "uuid-generator",
-  title: "UUID Generator",
-  description:
-    "Generate one or more random UUIDs and copy them for testing, mock data, or development work.",
-  href: "/uuid-generator",
-  category: "developer",
+    slug: "uuid-generator",
+    title: "UUID Generator",
+    description:
+      "Generate one or more random UUIDs and copy them for testing, mock data, or development work.",
+    href: "/uuid-generator",
+    category: "developer",
   },
   {
-  slug: "timestamp-converter",
-  title: "Timestamp Converter",
-  description:
-    "Convert Unix timestamps to readable dates and convert dates back to Unix time.",
-  href: "/timestamp-converter",
-  category: "developer",
+    slug: "timestamp-converter",
+    title: "Timestamp Converter",
+    description:
+      "Convert Unix timestamps to readable dates and convert dates back to Unix time.",
+    href: "/timestamp-converter",
+    category: "developer",
   },
   {
-  slug: "html-entity-encoder-decoder",
-  title: "HTML Entity Encoder / Decoder",
-  description:
-    "Encode HTML special characters into entities and decode entities back to readable text.",
-  href: "/html-entity-encoder-decoder",
-  category: "developer",
+    slug: "html-entity-encoder-decoder",
+    title: "HTML Entity Encoder / Decoder",
+    description:
+      "Encode HTML special characters into entities and decode entities back to readable text.",
+    href: "/html-entity-encoder-decoder",
+    category: "developer",
   },
   {
-  slug: "regex-tester",
-  title: "Regex Tester",
-  description:
-    "Test regular expressions against sample text and review matches, groups, and flags.",
-  href: "/regex-tester",
-  category: "developer",
+    slug: "regex-tester",
+    title: "Regex Tester",
+    description:
+      "Test regular expressions against sample text and review matches, groups, and flags.",
+    href: "/regex-tester",
+    category: "developer",
   },
   {
-  slug: "jwt-decoder",
-  title: "JWT Decoder",
-  description:
-    "Decode JWT headers and payloads locally in your browser for quick inspection.",
-  href: "/jwt-decoder",
-  category: "developer",
+    slug: "jwt-decoder",
+    title: "JWT Decoder",
+    description:
+      "Decode JWT headers and payloads locally in your browser for quick inspection.",
+    href: "/jwt-decoder",
+    category: "developer",
   },
   {
-  slug: "api-response-formatter",
-  title: "API Response Formatter",
-  description:
-    "Format API response JSON, inspect status details, and copy clean output for debugging.",
-  href: "/api-response-formatter",
-  category: "developer",
+    slug: "api-response-formatter",
+    title: "API Response Formatter",
+    description:
+      "Format API response JSON, inspect status details, and copy clean output for debugging.",
+    href: "/api-response-formatter",
+    category: "developer",
   },
   {
-  slug: "css-unit-converter",
-  title: "CSS Unit Converter",
-  description:
-    "Convert common CSS units like px, rem, em, vw, and vh for front-end development.",
-  href: "/css-unit-converter",
-  category: "developer",
+    slug: "css-unit-converter",
+    title: "CSS Unit Converter",
+    description:
+      "Convert common CSS units like px, rem, em, vw, and vh for front-end development.",
+    href: "/css-unit-converter",
+    category: "developer",
   },
 ];
 
@@ -692,77 +712,77 @@ export const travelTools: ToolItem[] = [
     category: "travel",
   },
   {
-  slug: "road-trip-gas-calculator",
-  title: "Road Trip Gas Calculator",
-  description:
-    "Estimate road trip fuel cost from distance, MPG, gas price, and one-way or round-trip travel.",
-  href: "/road-trip-gas-calculator",
-  category: "travel",
+    slug: "road-trip-gas-calculator",
+    title: "Road Trip Gas Calculator",
+    description:
+      "Estimate road trip fuel cost from distance, MPG, gas price, and one-way or round-trip travel.",
+    href: "/road-trip-gas-calculator",
+    category: "travel",
   },
   {
-  slug: "hotel-cost-splitter",
-  title: "Hotel Cost Splitter",
-  description:
-    "Split hotel or Airbnb costs across people and nights, including taxes, fees, and uneven shares.",
-  href: "/hotel-cost-splitter",
-  category: "travel",
+    slug: "hotel-cost-splitter",
+    title: "Hotel Cost Splitter",
+    description:
+      "Split hotel or Airbnb costs across people and nights, including taxes, fees, and uneven shares.",
+    href: "/hotel-cost-splitter",
+    category: "travel",
   },
   {
-  slug: "packing-list-generator",
-  title: "Packing List Generator",
-  description:
-    "Generate a simple packing list based on trip length, weather, destination type, and travel style.",
-  href: "/packing-list-generator",
-  category: "travel",
+    slug: "packing-list-generator",
+    title: "Packing List Generator",
+    description:
+      "Generate a simple packing list based on trip length, weather, destination type, and travel style.",
+    href: "/packing-list-generator",
+    category: "travel",
   },
   {
-  slug: "flight-layover-calculator",
-  title: "Flight Layover Calculator",
-  description:
-    "Estimate whether a flight layover gives enough time for customs, bags, terminal changes, and airport size.",
-  href: "/flight-layover-calculator",
-  category: "travel",
+    slug: "flight-layover-calculator",
+    title: "Flight Layover Calculator",
+    description:
+      "Estimate whether a flight layover gives enough time for customs, bags, terminal changes, and airport size.",
+    href: "/flight-layover-calculator",
+    category: "travel",
   },
   {
-  slug: "attraction-time-planner",
-  title: "Attraction Time Planner",
-  description:
-    "Estimate how many attractions fit into a travel day using visit time, transit time, meals, and buffer.",
-  href: "/attraction-time-planner",
-  category: "travel",
+    slug: "attraction-time-planner",
+    title: "Attraction Time Planner",
+    description:
+      "Estimate how many attractions fit into a travel day using visit time, transit time, meals, and buffer.",
+    href: "/attraction-time-planner",
+    category: "travel",
   },
   {
-  slug: "travel-day-cost-calculator",
-  title: "Travel Day Cost Calculator",
-  description:
-    "Estimate the cost of a single travel day from meals, transit, activities, snacks, and buffer.",
-  href: "/travel-day-cost-calculator",
-  category: "travel",
+    slug: "travel-day-cost-calculator",
+    title: "Travel Day Cost Calculator",
+    description:
+      "Estimate the cost of a single travel day from meals, transit, activities, snacks, and buffer.",
+    href: "/travel-day-cost-calculator",
+    category: "travel",
   },
   {
-  slug: "currency-conversion-notes",
-  title: "Currency Conversion Notes",
-  description:
-    "Convert common travel amounts using a manual exchange rate for quick budgeting abroad.",
-  href: "/currency-conversion-notes",
-  category: "travel",
+    slug: "currency-conversion-notes",
+    title: "Currency Conversion Notes",
+    description:
+      "Convert common travel amounts using a manual exchange rate for quick budgeting abroad.",
+    href: "/currency-conversion-notes",
+    category: "travel",
   },
   {
-  slug: "travel-time-zone-planner",
-  title: "Travel Time Zone Planner",
-  description:
-    "Compare home and destination time zones, estimate jet lag direction, and plan arrival adjustment.",
-  href: "/travel-time-zone-planner",
-  category: "travel",
+    slug: "travel-time-zone-planner",
+    title: "Travel Time Zone Planner",
+    description:
+      "Compare home and destination time zones, estimate jet lag direction, and plan arrival adjustment.",
+    href: "/travel-time-zone-planner",
+    category: "travel",
   },
   {
-  slug: "travel-insurance-checklist",
-  title: "Travel Insurance Checklist",
-  description:
-    "Create a travel insurance comparison checklist based on trip type, destination, transportation, and coverage concerns.",
-  href: "/travel-insurance-checklist",
-  category: "travel",
-},
+    slug: "travel-insurance-checklist",
+    title: "Travel Insurance Checklist",
+    description:
+      "Create a travel insurance comparison checklist based on trip type, destination, transportation, and coverage concerns.",
+    href: "/travel-insurance-checklist",
+    category: "travel",
+  },
 ];
 
 export const businessTools: ToolItem[] = [
@@ -775,77 +795,77 @@ export const businessTools: ToolItem[] = [
     category: "business",
   },
   {
-  slug: "markup-calculator",
-  title: "Markup Calculator",
-  description:
-    "Calculate selling price, markup amount, margin, and profit from cost and markup percentage.",
-  href: "/markup-calculator",
-  category: "business",
+    slug: "markup-calculator",
+    title: "Markup Calculator",
+    description:
+      "Calculate selling price, markup amount, margin, and profit from cost and markup percentage.",
+    href: "/markup-calculator",
+    category: "business",
   },
   {
-  slug: "break-even-calculator",
-  title: "Break-Even Calculator",
-  description:
-    "Calculate how many units or sales you need to cover fixed and variable costs.",
-  href: "/break-even-calculator",
-  category: "business",
+    slug: "break-even-calculator",
+    title: "Break-Even Calculator",
+    description:
+      "Calculate how many units or sales you need to cover fixed and variable costs.",
+    href: "/break-even-calculator",
+    category: "business",
   },
   {
-  slug: "sales-tax-calculator",
-  title: "Sales Tax Calculator",
-  description:
-    "Calculate sales tax, pre-tax price, final total, and tax amount from a tax rate.",
-  href: "/sales-tax-calculator",
-  category: "business",
+    slug: "sales-tax-calculator",
+    title: "Sales Tax Calculator",
+    description:
+      "Calculate sales tax, pre-tax price, final total, and tax amount from a tax rate.",
+    href: "/sales-tax-calculator",
+    category: "business",
   },
   {
-  slug: "invoice-total-calculator",
-  title: "Invoice Total Calculator",
-  description:
-    "Calculate invoice subtotal, discount, tax, fees, and final total for a small business invoice.",
-  href: "/invoice-total-calculator",
-  category: "business",
+    slug: "invoice-total-calculator",
+    title: "Invoice Total Calculator",
+    description:
+      "Calculate invoice subtotal, discount, tax, fees, and final total for a small business invoice.",
+    href: "/invoice-total-calculator",
+    category: "business",
   },
   {
-  slug: "hourly-rate-calculator",
-  title: "Hourly Rate Calculator",
-  description:
-    "Calculate an hourly rate from salary goals, billable hours, expenses, taxes, and desired profit.",
-  href: "/hourly-rate-calculator",
-  category: "business",
+    slug: "hourly-rate-calculator",
+    title: "Hourly Rate Calculator",
+    description:
+      "Calculate an hourly rate from salary goals, billable hours, expenses, taxes, and desired profit.",
+    href: "/hourly-rate-calculator",
+    category: "business",
   },
   {
-  slug: "freelancer-rate-calculator",
-  title: "Freelancer Rate Calculator",
-  description:
-    "Estimate freelance hourly, daily, and project rates from income goals, expenses, taxes, and billable time.",
-  href: "/freelancer-rate-calculator",
-  category: "business",
+    slug: "freelancer-rate-calculator",
+    title: "Freelancer Rate Calculator",
+    description:
+      "Estimate freelance hourly, daily, and project rates from income goals, expenses, taxes, and billable time.",
+    href: "/freelancer-rate-calculator",
+    category: "business",
   },
   {
-  slug: "meeting-cost-calculator",
-  title: "Meeting Cost Calculator",
-  description:
-    "Estimate the cost of a meeting based on attendees, hourly rates, duration, and prep time.",
-  href: "/meeting-cost-calculator",
-  category: "business",
-  }, 
-  {
-  slug: "employee-cost-calculator",
-  title: "Employee Cost Calculator",
-  description:
-    "Estimate the total cost of an employee including salary, payroll taxes, benefits, equipment, and overhead.",
-  href: "/employee-cost-calculator",
-  category: "business",
+    slug: "meeting-cost-calculator",
+    title: "Meeting Cost Calculator",
+    description:
+      "Estimate the cost of a meeting based on attendees, hourly rates, duration, and prep time.",
+    href: "/meeting-cost-calculator",
+    category: "business",
   },
   {
-  slug: "startup-cost-calculator",
-  title: "Startup Cost Calculator",
-  description:
-    "Estimate startup costs from legal setup, equipment, software, inventory, marketing, and operating runway.",
-  href: "/startup-cost-calculator",
-  category: "business",
-  }, 
+    slug: "employee-cost-calculator",
+    title: "Employee Cost Calculator",
+    description:
+      "Estimate the total cost of an employee including salary, payroll taxes, benefits, equipment, and overhead.",
+    href: "/employee-cost-calculator",
+    category: "business",
+  },
+  {
+    slug: "startup-cost-calculator",
+    title: "Startup Cost Calculator",
+    description:
+      "Estimate startup costs from legal setup, equipment, software, inventory, marketing, and operating runway.",
+    href: "/startup-cost-calculator",
+    category: "business",
+  },
 ];
 
 export const healthTools: ToolItem[] = [
@@ -858,76 +878,76 @@ export const healthTools: ToolItem[] = [
     category: "health",
   },
   {
-  slug: "calorie-calculator",
-  title: "Calorie Calculator",
-  description:
-    "Estimate daily calories for maintenance, weight loss, or weight gain based on body stats and activity level.",
-  href: "/calorie-calculator",
-  category: "health",
+    slug: "calorie-calculator",
+    title: "Calorie Calculator",
+    description:
+      "Estimate daily calories for maintenance, weight loss, or weight gain based on body stats and activity level.",
+    href: "/calorie-calculator",
+    category: "health",
   },
   {
-  slug: "water-intake-calculator",
-  title: "Water Intake Calculator",
-  description:
-    "Estimate daily water intake based on weight, activity, weather, and caffeine or alcohol intake.",
-  href: "/water-intake-calculator",
-  category: "health",
+    slug: "water-intake-calculator",
+    title: "Water Intake Calculator",
+    description:
+      "Estimate daily water intake based on weight, activity, weather, and caffeine or alcohol intake.",
+    href: "/water-intake-calculator",
+    category: "health",
   },
   {
-  slug: "protein-calculator",
-  title: "Protein Calculator",
-  description:
-    "Estimate daily protein needs based on body weight, goal, and activity level.",
-  href: "/protein-calculator",
-  category: "health",
+    slug: "protein-calculator",
+    title: "Protein Calculator",
+    description:
+      "Estimate daily protein needs based on body weight, goal, and activity level.",
+    href: "/protein-calculator",
+    category: "health",
   },
   {
-  slug: "walking-calories-calculator",
-  title: "Walking Calories Calculator",
-  description:
-    "Estimate calories burned while walking based on weight, distance, pace, and time.",
-  href: "/walking-calories-calculator",
-  category: "health",
+    slug: "walking-calories-calculator",
+    title: "Walking Calories Calculator",
+    description:
+      "Estimate calories burned while walking based on weight, distance, pace, and time.",
+    href: "/walking-calories-calculator",
+    category: "health",
   },
   {
-  slug: "macro-calculator",
-  title: "Macro Calculator",
-  description:
-    "Estimate daily protein, carbs, and fat targets from calories and macro percentages.",
-  href: "/macro-calculator",
-  category: "health",
+    slug: "macro-calculator",
+    title: "Macro Calculator",
+    description:
+      "Estimate daily protein, carbs, and fat targets from calories and macro percentages.",
+    href: "/macro-calculator",
+    category: "health",
   },
   {
-  slug: "target-weight-planner",
-  title: "Target Weight Planner",
-  description:
-    "Estimate a target weight timeline based on current weight, goal weight, and weekly change.",
-  href: "/target-weight-planner",
-  category: "health",
+    slug: "target-weight-planner",
+    title: "Target Weight Planner",
+    description:
+      "Estimate a target weight timeline based on current weight, goal weight, and weekly change.",
+    href: "/target-weight-planner",
+    category: "health",
   },
   {
-  slug: "sleep-calculator",
-  title: "Sleep Calculator",
-  description:
-    "Estimate bedtime or wake-up time using sleep cycles, time to fall asleep, and desired rest.",
-  href: "/sleep-calculator",
-  category: "health",
+    slug: "sleep-calculator",
+    title: "Sleep Calculator",
+    description:
+      "Estimate bedtime or wake-up time using sleep cycles, time to fall asleep, and desired rest.",
+    href: "/sleep-calculator",
+    category: "health",
   },
   {
-  slug: "heart-rate-zone-calculator",
-  title: "Heart Rate Zone Calculator",
-  description:
-    "Estimate training heart rate zones from age and resting heart rate.",
-  href: "/heart-rate-zone-calculator",
-  category: "health",
+    slug: "heart-rate-zone-calculator",
+    title: "Heart Rate Zone Calculator",
+    description:
+      "Estimate training heart rate zones from age and resting heart rate.",
+    href: "/heart-rate-zone-calculator",
+    category: "health",
   },
   {
-  slug: "body-fat-estimate-calculator",
-  title: "Body Fat Estimate Calculator",
-  description:
-    "Estimate body fat percentage using simple body measurements and standard formula inputs.",
-  href: "/body-fat-estimate-calculator",
-  category: "health",
+    slug: "body-fat-estimate-calculator",
+    title: "Body Fat Estimate Calculator",
+    description:
+      "Estimate body fat percentage using simple body measurements and standard formula inputs.",
+    href: "/body-fat-estimate-calculator",
+    category: "health",
   },
 ];
 
@@ -951,7 +971,7 @@ export function getToolsByCategory(category: ToolCategorySlug) {
 export function getRelatedTools(
   currentHref: string,
   category: ToolCategorySlug,
-  limit = 3
+  limit = 3,
 ) {
   return allTools
     .filter((tool) => tool.category === category && tool.href !== currentHref)
