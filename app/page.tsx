@@ -154,7 +154,7 @@ export default function Home() {
               Goodfolk Digital
             </a>
 
-            <h1 className="text-5xl font-bold md:text-6xl">Goodfolk Toolbox</h1>
+            <h1 className="text-3xl font-bold md:text-6xl">Goodfolk Toolbox</h1>
 
             <p className="mt-4 max-w-2xl text-lg text-zinc-300">
               Small, sharp browser-based tools for everyday good folk.
