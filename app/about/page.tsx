@@ -80,6 +80,69 @@ export default function AboutPage() {
           >
             Browse camp tools
           </Link>
+
+          <Link
+            href="/developer"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse developer tools
+          </Link>
+
+          <Link
+            href="/health"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse health tools
+          </Link>
+
+          <Link
+            href="/travel"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse travel tools
+          </Link>
+
+          <Link
+            href="/home"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse home tools
+          </Link>
+
+          <Link
+            href="/design"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse design tools
+          </Link>
+
+          <Link
+            href="/business"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse business tools
+          </Link>
+
+          <Link
+            href="/student"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse student tools
+          </Link>
+
+          <Link
+            href="/office"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse office tools
+          </Link>
+
+          <Link
+            href="/finance"
+            className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
+          >
+            Browse finance tools
+          </Link>
         </div>
 
         <footer className="mt-16 border-t border-slate-800 pt-8 text-sm text-zinc-500">

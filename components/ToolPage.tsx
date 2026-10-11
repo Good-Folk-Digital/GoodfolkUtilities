@@ -1,4 +1,5 @@
 import Link from "next/link";
+import AffiliateBox from "@/components/AffiliateBox";
 
 type ToolPageProps = {
   line:
@@ -40,6 +41,8 @@ export default function ToolPage({
         <p className="text-zinc-300 mb-8 max-w-2xl">{description}</p>
 
         {children}
+
+        <AffiliateBox line={line} />
 
         <footer className="mt-16 text-sm text-zinc-500">
   © {new Date().getFullYear()}{" "}
