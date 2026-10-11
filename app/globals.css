@@ -31,6 +31,10 @@
   --color-amber-900: #3d3010;
   --color-amber-950: #241c0a;
 
+  /* sharper corners to match goodfolkdigital.com */
+  --radius-2xl: 0.625rem;
+  --radius-xl: 0.5rem;
+
   /* zinc -> cool white / blue-gray */
   --color-zinc-50: #ffffff;
   --color-zinc-100: #f4f6fa;
