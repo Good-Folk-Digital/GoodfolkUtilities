@@ -68,13 +68,6 @@ export default function AboutPage() {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
-            href="/office"
-            className="rounded-xl bg-amber-300 px-5 py-3 text-center font-semibold text-slate-950 transition hover:bg-amber-200"
-          >
-            Browse office tools
-          </Link>
-
-          <Link
             href="/camp"
             className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
           >
