@@ -2,21 +2,22 @@
 
 /* Goodfolk navy / gold / white theme.
    Remaps the slate + amber + zinc palettes site-wide so every tool
-   picks up the new brand colors with no per-page changes. */
+   picks up the new brand colors with no per-page changes.
+   Navy values matched to goodfolkdigital.com. */
 
 @theme {
-  /* slate -> deep navy */
-  --color-slate-50: #f0f4fa;
+  /* slate -> deep navy (matched to goodfolkdigital.com) */
+  --color-slate-50: #eef2f8;
   --color-slate-100: #dbe4f0;
   --color-slate-200: #c2cfe4;
   --color-slate-300: #9db1cc;
   --color-slate-400: #7d8fb0;
   --color-slate-500: #5a6f96;
   --color-slate-600: #3d5178;
-  --color-slate-700: #274067;
-  --color-slate-800: #12294d;
-  --color-slate-900: #0a1830;
-  --color-slate-950: #060f1f;
+  --color-slate-700: #2a3d5e;
+  --color-slate-800: #142641;
+  --color-slate-900: #0d1f3c;
+  --color-slate-950: #08172e;
 
   /* amber -> rich gold */
   --color-amber-50: #fbf7e8;
@@ -44,13 +45,13 @@
   --color-zinc-500: #7d8fb0;
   --color-zinc-600: #5a6f96;
   --color-zinc-700: #3d5178;
-  --color-zinc-800: #274067;
-  --color-zinc-900: #12294d;
-  --color-zinc-950: #0a1830;
+  --color-zinc-800: #1d2e48;
+  --color-zinc-900: #142641;
+  --color-zinc-950: #0d1f3c;
 }
 
 :root {
-  --background: #0a1830;
+  --background: #0d1f3c;
   --foreground: #ffffff;
 }
 
