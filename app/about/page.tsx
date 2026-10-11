@@ -108,7 +108,8 @@ export default function AboutPage() {
           >
             Browse home tools
           </Link>
-
+        </div>
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <Link
             href="/design"
             className="rounded-xl border border-slate-700 px-5 py-3 text-center font-semibold text-zinc-200 transition hover:bg-slate-900"
